@@ -17,23 +17,23 @@
             <div id="filter">
                 <button class="buttn buttn_type_all" data-filter="all">Процессор</button>
                 <hr>
-                <button class="buttn buttn_type_toyota" data-filter="toyota">Клавиатура</button>
+                <button class="buttn buttn_type_keyboard" data-filter="keyboard">Клавиатура</button>
                 <hr>
-                <button class="buttn buttn_type_honda" data-filter="honda">Мышь</button>
+                <button class="buttn buttn_type_mouse" data-filter="mouse">Мышь</button>
                 <hr>
-                <button class="buttn buttn_type_ford" data-filter="ford">Монитор</button>
+                <button class="buttn buttn_type_monitor" data-filter="monitor">Монитор</button>
                 <hr>
-                <button class="buttn buttn_type_ford" data-filter="ford">Оперативная память </button>
+                <button class="buttn buttn_type_ram" data-filter="ram">Оперативная память </button>
                 <hr>
-                <button class="buttn buttn_type_nissan" data-filter="nissan">Операционная система</button>
+                <button class="buttn buttn_type_system" data-filter="system">Операционная система</button>
                 <hr>
             </div>
         </div>
         <div id="list">
-            <div id="choice">
-                <p>Процессор</p>
+            <div class="choice">
+                <p class="asd">Процессор</p>
             </div>
-            <select id="selprocessor">
+            <select id="selProcessor">
                 <option value="Intel core i3">Intel core i3</option>
                 <option value="Intel core i5">Intel core i5</option>
                 <option value="Intel core i7">Intel core i7</option>
@@ -41,12 +41,10 @@
                 <option value="Ryzen 5">Ryzen 5</option>
                 <option value="Ryzen 9">Ryzen 9</option>
             </select>
-            <input type="submit" id="submit" value="Показать">
 
-            <hr>
-            <div id="choice">
-                <p>Клавиатура</p>
-                <select id="selkeyboard">
+            <div class="choice">
+                <p class="asd">Клавиатура</p>
+                <select id="selKeyboard">
                     <option value="A4tech">A4tech</option>
                     <option value="Asus">Asus</option>
                     <option value="Logitech">Logitech</option>
@@ -56,10 +54,10 @@
                 </select>
 
             </div>
-            <hr>
-            <div id="choice">
-                <p>Мышь</p>
-                <select id="selmouse">
+
+            <div class="choice">
+                <p class="asd">Мышь</p>
+                <select id="selMouse">
                     <option value="A4tech">A4tech</option>
                     <option value="Asus">Asus</option>
                     <option value="Logitech">Logitech</option>
@@ -69,10 +67,10 @@
                 </select>
 
             </div>
-            <hr>
-            <div id="choice">
-                <p>Монитор</p>
-                <select id="selmonitor">
+
+            <div class="choice">
+                <p class="asd">Монитор</p>
+                <select id="selMonitor">
                     <option value="Samsung">Samsung</option>
                     <option value="LG">LG</option>
                     <option value="Asus">Asus</option>
@@ -82,10 +80,10 @@
                 </select>
 
             </div>
-            <hr>
-            <div id="choice">
-                <p>Оперативная память </p>
-                <select id="selopstor">
+
+            <div class="choice">
+                <p class="asd">Оперативная память </p>
+                <select id="selRam">
                     <option value="Kingston HyperX">Kingston HyperX</option>
                     <option value="G.Skill">G.Skill</option>
                     <option value="ThermalTake">ThermalTake</option>
@@ -93,10 +91,10 @@
                 </select>
 
             </div>
-            <hr>
-            <div id="choice">
-                <p>Операционная система</p>
-                <select id="selopsys">
+
+            <div class="choice">
+                <p class="asd">Операционная система</p>
+                <select id="selSystem">
                     <option value="WINDOWS 10">WINDOWS 10</option>
                     <option value="WINDOWS 7">WINDOWS 7</option>
                     <option value="Android">Android</option>
@@ -105,8 +103,9 @@
 
                 </select>
 
+                <input type="submit" id="submit" value="Показать">
             </div>
-            <hr>
+
         </div>
         <div id="summa">he</div>
     </div>

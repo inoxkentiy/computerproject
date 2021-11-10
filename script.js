@@ -1,11 +1,23 @@
+let subButton = document.getElementById("submit")
+let processor = document.getElementById("selProcessor")
 
-document.addEventListener('DOMContentLoaded', function () {
-    let input = document.getElementById('selprocessor');
-    if (localStorage['selprocessor']) {
-        input.value = localStorage['selprocessor'];
-    }
-    document.getElementById("submit").addEventListener('click', function () {
-        localStorage['selprocessor'] = this.value;
-    }) 
-});
-console.log(selprocessor)
+let keyboard = document.getElementById("selKeyboard")
+
+let mouse = document.getElementById("selMouse")
+
+let monitor = document.getElementById("selMonitor")
+
+let ram = document.getElementById("selRam")
+
+let system = document.getElementById("selSystem")
+subButton.addEventListener('click', function () {
+    let procValue = processor.value
+    let keyValue = keyboard.value
+    let mouseValue = mouse.value
+    let monValue = monitor.value
+    let ramValue = ram.value
+    let sysValue = system.value
+
+    let choice = [procValue, keyValue, mouseValue, monValue, ramValue, sysValue]
+    console.log(choice)
+})
