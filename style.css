@@ -412,3 +412,10 @@ Resources footer {
 .product-image:hover img {
     transform: scale(1.2, 1.2);
 }
+.qwe{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}.asd{
+    display: grid;
+    grid-template-columns: repeat(2, 2fr);
+}
