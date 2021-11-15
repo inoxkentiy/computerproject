@@ -11,7 +11,6 @@ p {
 
 #wrap {
     width: 90%;
-    display: flex;
     margin: auto;
 }
 
@@ -327,9 +326,7 @@ Resources footer {
     text-align: center;
     border-radius: 5px;
     overflow: hidden;
-    margin: 5em auto;
     height: 350px;
-    width: 30%;
     transition: 0.5s all;
 }
 
@@ -412,10 +409,65 @@ Resources footer {
 .product-image:hover img {
     transform: scale(1.2, 1.2);
 }
-.qwe{
+
+.qwe {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-}.asd{
+}
+
+.asd {
     display: grid;
     grid-template-columns: repeat(2, 2fr);
+}
+
+#processor {
+    background-color: #fff;
+    width: 100%;
+    margin-top: 30px;
+    color: black;
+}
+
+#monitor {
+    background-color: red;
+    width: 100%;
+    margin-top: 30px;
+}
+
+#keyboard {
+    background-color: purple;
+    width: 100%;
+    margin-top: 30px;
+}
+
+#mouse {
+    background-color: green;
+    width: 100%;
+    margin-top: 30px;
+}
+
+#ram {
+    background-color: yellow;
+    width: 100%;
+    margin-top: 30px;
+}
+
+#system {
+    background-color: brown;
+    width: 100%;
+    margin-top: 30px;
+}
+
+#wrap h4 {
+    text-align: center;
+}
+
+.threecolumns{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 20px;
+}
+.twocolumns{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 20px;
 }
