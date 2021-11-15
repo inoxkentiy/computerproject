@@ -7,71 +7,81 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
         integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10.10.1/dist/sweetalert2.all.min.js"></script>
+    <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/sweetalert2@10.10.1/dist/sweetalert2.min.css'>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+
     <title>Document</title>
+
 </head>
 
 <body>
-    <div id="wrap">
-        <div id="category">
-            <div id="filter">
-                <button class="buttn buttn_type_all" data-filter="all">Процессор</button>
-                <hr>
-                <button class="buttn buttn_type_keyboard" data-filter="keyboard">Клавиатура</button>
-                <hr>
-                <button class="buttn buttn_type_mouse" data-filter="mouse">Мышь</button>
-                <hr>
-                <button class="buttn buttn_type_monitor" data-filter="monitor">Монитор</button>
-                <hr>
-                <button class="buttn buttn_type_ram" data-filter="ram">Оперативная память </button>
-                <hr>
-                <button class="buttn buttn_type_system" data-filter="system">Операционная система</button>
-                <hr>
-            </div>
-        </div>
+    <section id="slider">
+        <input type="radio" name="slider" id="s1">
+        <input type="radio" name="slider" id="s2">
+        <input type="radio" name="slider" id="s3" checked>
+        <input type="radio" name="slider" id="s4">
+        <input type="radio" name="slider" id="s5">
+        <label for="s1" id="slide1"></label>
+        <label for="s2" id="slide2"></label>
+        <label for="s3" id="slide3">Доверься Кирпичу.
+            <br>
+            Сделай правильный выбор.
+        </label>
+        <label for="s4" id="slide4"></label>
+        <label for="s5" id="slide5"></label>
+    </section>
+    <br>
+    <button id="brick">Нажмите,чтобы начать операцию по созданию вашего личного кирпича.</button>
+    <br>
+    <hr id="hr">
+    <div id="wrap" style="visibility: hidden;">
         <div id="list">
-            <div class="choice">
-                <p class="asd">Процессор</p>
+            <div class="choice" id="processor">
+                <p>Процессор</p>
+                <select id="selProcessor" class="select">
+                    <option value="Intel core i3" disabled>Intel core i3</option>
+                    <option value="Intel core i5">Intel core i5</option>
+                    <option value="Intel core i7">Intel core i7</option>
+                    <option value="Intel core i9">Intel core i9</option>
+                    <option value="Ryzen 5">Ryzen 5</option>
+                    <option value="Ryzen 9">Ryzen 9</option>
+                </select>
             </div>
-            <select id="selProcessor">
-                <option value="Intel core i3">Intel core i3</option>
-                <option value="Intel core i5">Intel core i5</option>
-                <option value="Intel core i7">Intel core i7</option>
-                <option value="Intel core i9">Intel core i9</option>
-                <option value="Ryzen 5">Ryzen 5</option>
-                <option value="Ryzen 9">Ryzen 9</option>
-            </select>
 
-            <div class="choice">
-                <p class="asd">Клавиатура</p>
-                <select id="selKeyboard">
-                    <option value="A4tech">A4tech</option>
+
+            <div class="choice" id="keyboard">
+                <p>Клавиатура</p>
+                <select id="selKeyboard" class="select">
+                    <option value="A4tech" disabled>A4tech</option>
                     <option value="Asus">Asus</option>
                     <option value="Logitech">Logitech</option>
                     <option value="Razer">Razer</option>
                     <option value="Reddragon">Reddragon</option>
                     <option value="Varmilo">Varmilo</option>
                 </select>
-
             </div>
 
-            <div class="choice">
-                <p class="asd">Мышь</p>
-                <select id="selMouse">
-                    <option value="A4tech">A4tech</option>
+            <div class="choice" id="mouse">
+                <p>Мышь</p>
+                <select id="selMouse" class="select">
+                    <option value="A4tech" disabled>A4tech</option>
                     <option value="Asus">Asus</option>
                     <option value="Logitech">Logitech</option>
                     <option value="Razer">Razer</option>
                     <option value="Steel series">Steel series</option>
                     <option value="Elecom">Elecom</option>
                 </select>
-
             </div>
 
-            <div class="choice">
-                <p class="asd">Монитор</p>
-                <select id="selMonitor">
-                    <option value="Samsung">Samsung</option>
+            <div class="choice" id="monitor">
+                <p>Монитор</p>
+                <select id="selMonitor" class="select">
+                    <option value="Samsung" disabled>Samsung</option>
                     <option value="LG">LG</option>
                     <option value="Asus">Asus</option>
                     <option value="Philips">Philips</option>
@@ -81,40 +91,39 @@
 
             </div>
 
-            <div class="choice">
-                <p class="asd">Оперативная память </p>
-                <select id="selRam">
-                    <option value="Kingston HyperX">Kingston HyperX</option>
+            <div class="choice" id="ram">
+                <p>Оперативная память </p>
+                <select id="selRam" class="select">
+                    <option value="Kingston HyperX" disabled>Kingston HyperX</option>
                     <option value="G.Skill">G.Skill</option>
                     <option value="ThermalTake">ThermalTake</option>
                     <option value="Microne">Microne</option>
                 </select>
-
             </div>
 
-            <div class="choice">
-                <p class="asd">Операционная система</p>
-                <select id="selSystem">
-                    <option value="WINDOWS 10">WINDOWS 10</option>
+            <div class="choice" id="system">
+                <p>Операционная система</p>
+                <select id="selSystem" class="select">
+                    <option value="WINDOWS 10" disabled>WINDOWS 10</option>
                     <option value="WINDOWS 7">WINDOWS 7</option>
                     <option value="Android">Android</option>
                     <option value="MacOS">MacOS</option>
                     <option value="Linux">Linux</option>
-
                 </select>
-
-                <input type="submit" id="submit" value="Показать">
             </div>
-
         </div>
+
         <div id="summa">
-            Вы собираетесь оформить заказ
-            <button id="zakazofor">нажмите два раза,чтобы оформить заказ</button>
+            <div class="korzina">
+                <div class="korzinaChild cost">0$</div>
+                <div class="korzinaChild">
+                    <button class="submit btns buy">Купить</button>
+                    <button class="submit btns help">Помощь</button>
+                    <button class="submit btns manual">Инструкция</button>
+                </div>
+            </div>
         </div>
     </div>
-
-
-
     <script src="script.js"></script>
 </body>
 
