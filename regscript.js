@@ -1,17 +1,18 @@
-let btn = document.querySelector("#btn");
+let zaregatsa = document.querySelector("#btn2");
+let emailforsensing = document.querySelector("#email");
 let counter = 0;
-let checkbox = document.querySelector("#checkbox")
-
-btn.addEventListener('click', function (st) {
-    let email = document.querySelector("#emailInput").value;
+let checkbox = document.querySelector("#one")
+let verifificationInput = document.querySelector("#ver");
+zaregatsa.addEventListener('click', function (st) {
+    let login = document.querySelector("#emailInput").value;
     let password = document.querySelector("#passwordInput").value;
-    localStorage.setItem("name", (email));
+    localStorage.setItem("name", (login));
     localStorage.setItem("password", (password));
-    if (email === "") {
+    if (login === "") {
         alert("Вы не ввели логин,ошибка")
     }
     let Account = {
-        name: email,
+        name: login,
         password: password
     }
 
@@ -38,33 +39,22 @@ btn.addEventListener('click', function (st) {
     else {
         alert('Нажмите на квадрат');
     }
-
-
-
-
-
-
 });
 
-
-
-// Добавление 2-й кнопки.
-let buttonSecond = document.querySelector("#btnSecond")
-btnSecond.addEventListener('click', function (st) {
+let voity = document.querySelector("#btnSecond")
+voity.addEventListener('click', function (st) {
     let emailSecond = document.querySelector("#emailInput2").value;
     let passwordSecond = document.querySelector("#passwordInput2").value;
     localStorage.setItem("name2", (emailSecond));
     localStorage.setItem("password2", (passwordSecond));
-    //Если email - 0=>alert 
 
     if (emailSecond === localStorage.getItem("name") && passwordSecond === localStorage.getItem("password")) {
         console.log("Вы успешно вошли")
         alert("Вы успешно вошли")
-        location.href = "index.html"
+        window.location.href = "kor.html"
     }
     else {
-        alert("Вы не ввели логин,ошибка")
-        location.href = "registration.html"
+        alert("Вы ввели некорректные данные,ошибка")
     }
 
 
@@ -86,4 +76,37 @@ refresh.addEventListener('click', () => {
 
     refreshBlock.append(`<div>Зарегистрированных  пользователей: ${(localStorage.getItem("counter"))}</div>`)
     console.log(JSON.parse(localStorage.getItem("counter")))
+})
+
+let pismootpr = document.querySelector("#btn1")
+pismootpr.addEventListener('click', function () {
+    sendEm()
+})
+
+
+let code = (Math.floor(Math.random() * 1000000))
+
+
+function sendEm() {
+    let templateParams = {
+        from_name: 'Asselina',
+        ver_code: code,
+        to_email: `${emailforsensing.value}`
+    };
+
+    emailjs.send('service_89b1wzg', 'template_tbbrbab', templateParams)
+        .then(function (response) {
+            console.log('SUCCESS!', response.status, response.text);
+        }, function (error) {
+            console.log('FAILED...', error);
+        });
+}
+
+
+zaregatsa.addEventListener('click', function () {
+    if (code == verifificationInput.value) {
+        alert("Вы успешно зарегестрировались")
+    } else {
+        alert("Неправильный код!Попробуйте заново")
+    }
 })

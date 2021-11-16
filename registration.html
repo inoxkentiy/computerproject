@@ -5,63 +5,69 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="regisStyle.css">
+    <title>Registration</title>
 </head>
 
-<body style="background-color: gray">
-    <p id="hehe" style="text-align: center;">Перед тем,как оормить заказ,вам нужно зарегестрироваться или войти/</p>
-    <article>
+<body>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function () {
+            emailjs.init("user_h8FRMzWOqaf3x4xunQUc6");
+        })();
+    </script>
+    <p id="first">ПЕРЕД ТЕМ, КАК ОФОРМИТЬ ЗАКАЗ, ВАМ НУЖНО ЗАРЕГИСТРИРОВАТЬСЯ ИЛИ ВОЙТИ!</p>
+    <p id="all">
+    <article class="regis">
         <div class="container">
 
-            <h4>регистрация</h4>
-            <label for="login"><b>Логин</b></label>
-            <input type="text" placeholder="Введите ваш будущий логин" name="email" id="emailInput" required="">
-
+            <h4>РЕГИСТРАЦИЯ</h4>
+            <label for="login"><b>Логин</b></label> &nbsp;
+            <input type="text" placeholder="Введите ваш логин" name="email" id="emailInput" required="">
+            <br><br>
             <label for="psw"><b>Пароль</b></label>
-            <input type="password" placeholder="Введите будущий пароль" name="psw" id="passwordInput" required="">
+            <input type="password" placeholder="Введите пароль" name="psw" id="passwordInput" required="">
+            <br><br>
+            <label for="psw"><b>Почта</b></label> &nbsp;
+            <input type="email" placeholder="Введите почту" name="email" id="email" required="">
+            <br><br>
+            <label for="psw"><b>Код</b></label> &nbsp; &nbsp; &nbsp;
+            <input type="text" placeholder="Введите код верификации" name="ver" id="ver" required="">
 
-            <p style="font-size: 12px;">Регистрируясь, вы принимаете
-            </p>
-            <p id="hehe">
-                <a style="color: rgba(18, 18, 129, 0.788);" href="./Пользовательское.html">
-                    пользовательское соглашение и
-                    политику
-                    конфиденциальности
-                </a>
+            <p id="rules">Регистрируясь, вы принимаете <span><a href="./Пользовательское.html">
+                        пользовательское соглашение и
+                        политику
+                        конфиденциальности
+                    </a></span>
+            </p> <input type="checkbox" id="one">
 
-                <input type="checkbox" id="one">
-
-                <button id="btn" class="btnLog">зарегестриротвася\ся\</button>
+            <button id="btn1" class="btnLog">Отправить письмо</button>
+            <button id="btn2" class="btnLog">Зарегистрироваться</button>
         </div>
     </article>
 
-    <article>
+    <article class="login">
         <div class="container" style="margin-top: 50px;">
-            <h4 id="black">Заполните эту форму,чтобы залогиниться.</h4>
+            <h3 id="black">Заполнить форму авторизации и залогиниться на сайт.</h3>
 
-            <h4>вход</h4>
-            <label for="login"><b>Логин</b></label>
+            <h4>ВХОД</h4>
+            <label for="login"><b>Логин</b></label> &nbsp;
             <input type="text" placeholder="Введите ваш логин" name="email" id="emailInput2" required="">
-
+            <br><br>
             <label for="psw"><b>Пароль</b></label>
             <input type="password" placeholder="Введите пароль" name="psw" id="passwordInput2" required="">
+            <br> <br>
+            <button id="btnSecond">Login</button> &nbsp;
+            <button id="delete">Delete</button> &nbsp; <button id="refresh">Refresh Users</button>
 
-
-
-            <button id="btnSecond">Login.</button>
-            <button id="delete">Delete</button>
-            <div class=".asd">
-                <button id="refresh">Refresh Users</button>
-
-                <div id="refreshBlock">
-
-                </div>
+            <div id="refreshBlock">
 
             </div>
         </div>
 
 
     </article>
+    </p>
     <script src="regscript.js"></script>
 </body>
 

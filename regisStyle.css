@@ -1,0 +1,43 @@
+body {
+    background-image: url(./baaaack.jpg);
+}
+
+#first {
+    text-align: center;
+}
+
+#rules {
+    font-size: 12px;
+}
+
+
+#all {
+    padding: 30px;
+}
+
+.regis {
+    float: left;
+    padding: 36px;
+    margin: 15px;
+    border: 2px solid black;
+    border-radius: 10px;
+    background-color: lightsteelblue;
+}
+
+.login {
+    float: right;
+    margin: 62px;
+    border: 2px solid black;
+    border-radius: 10px;
+    padding: 36px;
+    background-color: lightsteelblue;
+}
+
+#first {
+    text-align: center;
+    background-color: #9d5093;
+    height: 0px;
+    padding: 2%;
+    border-bottom: 2px solid #38494f;
+    color: white;
+  }
