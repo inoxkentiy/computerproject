@@ -1,9 +1,9 @@
 let brickbutton = document.getElementById('brick')
-let divwrap = document.getElementById('wrap')
+ divwrap = $('#wrap')
 
 
 brickbutton.addEventListener('click', function () {
-    divwrap.style.visibility = 'visible'
+    divwrap.show()
     Swal.fire("Внимание!", "Перед началом выбора уведомляем вас о том, что вы можете выбрать только один элемент из всего списка.Поэтому, перед тем,как нажать кнопку для оформления заказа,убедитесь в правильности выбранных товаров.", "success");
 })
 let subButton = document.getElementById("submit")
