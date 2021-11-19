@@ -542,11 +542,8 @@ Resources footer {
 
 button{
     padding: 10px;
+    margin: 15px auto;
     border: 2px solid purple;
-    background-color: rgb(32, 1, 32);
-    margin: 0 auto;
-    color: white;
-    margin-top: 15px;
 }
 
 

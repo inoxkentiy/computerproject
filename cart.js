@@ -4,34 +4,22 @@ let ofor = document.querySelector("#oforbtn");
 let delOneObj = document.querySelector("#delOneObj");
 let sum = 0;
 
-let cartArray = JSON.parse(localStorage.getItem("cartArray"))
+let cart = JSON.parse(localStorage.getItem("cartArray"))
 let clear = document.querySelector("#deletebtn");
 listdiv = $("#list")
-cartArray.map(item => listdiv.append(`<div class="info_block">
+cart.map(item => listdiv.append(`<div class="info_block">
     <p>Товар: ${item.name}</p>
     <p>Цена: ${item.price} KZT</p>
-    <p>Категория: ${item.type} KZT</p>
-    <button class="buttonStyle" onclick="deleteitem('${item.name}')" id="delOneObj${cartArray.indexOf(item)}">Убрать товар</button><br>
+    <button class="buttonStyle" id="delOneObj${cart.indexOf(item)}">Убрать товар</button><br>
     </div>`))
-function deleteitem(name) {
-    for (let i = 0; i < cartArray.length; i++) {
-        if (cartArray[i].name === name) {
-            cartArray.splice(i, 1);
-            break;
-        }
-    }
-    localStorage.setItem("cartArray", JSON.stringify(cartArray));
-    location.reload();
-}
-
 
 clear.addEventListener('click', function () {
     localStorage.removeItem("cartArray");
     listdiv.empty();
 })
 
-for (let i = 0; i < cartArray.length; i++) {
-    sum += cartArray[i].price;
+for (let i = 0; i < cart.length; i++) {
+    sum += cart[i].price;
 }
 console.log(sum)
 let red = document.getElementById('red');
@@ -50,10 +38,17 @@ clear.addEventListener('click', function () {
     localStorage.removeItem("cartArray");
     listdiv.empty();
 })
-console.log(cartArray)
+console.log(cart)
 
 ofor.addEventListener('click', function () {
     alert(`Вы должны оплатить ${sumwithShipping}.
     Как будете платить?
     Картой или наличными?`)
+})
+
+
+let delOneObj0 = document.getElementById(`delOneObj${cart.indexOf(item)}`);
+delOneObj0.addEventListener('click', function () {
+    cart.splice(cartArray.indexOf(item))
+    location.reload()
 })

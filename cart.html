@@ -5,8 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
-        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,8 +15,7 @@
     <link rel="stylesheet" href="cart.css">
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10.10.1/dist/sweetalert2.all.min.js"></script>
     <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/sweetalert2@10.10.1/dist/sweetalert2.min.css'>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
-        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
     <title>Document</title>
@@ -29,7 +27,7 @@
             <a href="./index.html">Главная</a>
         </div>
         <div class="korzina">
-            <a href="./kor copy.html">Корзина</a>
+            <a href="./cart.html">Корзина</a>
         </div>
         <div class="login">
             <a href="./registration.html">Вход</a>
@@ -38,9 +36,9 @@
     <h3 class="h3words">Корзина</h3>
 
     <div class="bigbox">
-        <div id="list">
+        <div id="list" class="minibox">
         </div>
-        <div class="info_block">
+        <div class="info_block minibox">
             <div>
                 <p>Общая сумма:</p>
                 <div class="blockasd">
@@ -54,12 +52,8 @@
             </div>
             <div>
                 <p>Как будете платить?<br>
-                    <a target="blank"
-                        href="https://kaspi.kz/shop/?utm_source=google&utm_medium=cpc&utm_campaign=Shop_Search_KASPI_BRAND&gclid=CjwKCAjwiY6MBhBqEiwARFSCPvIvoduZd0yg2N6no_48cPDqnOf6wQpel8g0OjCB9Rqgx9TRFLP_bhoCU_AQAvD_BwE&at=1"
-                        id="service">Картой</a>
-                    или
-                    <a target="blank" href="https://kaspi.kz/guide/ru/cash_credit/receive/" id="service">наличными</a>
-                    ?
+                    <a target="blank" href="https://kaspi.kz/shop/?utm_source=google&utm_medium=cpc&utm_campaign=Shop_Search_KASPI_BRAND&gclid=CjwKCAjwiY6MBhBqEiwARFSCPvIvoduZd0yg2N6no_48cPDqnOf6wQpel8g0OjCB9Rqgx9TRFLP_bhoCU_AQAvD_BwE&at=1" id="service">Картой</a>                    или
+                    <a target="blank" href="https://kaspi.kz/guide/ru/cash_credit/receive/" id="service">наличными</a> ?
                 </p>
             </div>
             <br><button id="deletebtn" class="buttonStyle bigBtnStyle">Почистить корзину</button>

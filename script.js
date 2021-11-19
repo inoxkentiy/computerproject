@@ -21,7 +21,7 @@ function addToCart(name, price) {
     let element = {
         name: name,
         price: price,
-        type: type
+        //type: mouse
     };
 
     let cartArray = JSON.parse(localStorage.getItem("cartArray"))
