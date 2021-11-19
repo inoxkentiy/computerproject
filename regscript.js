@@ -51,7 +51,7 @@ voity.addEventListener('click', function (st) {
     if (emailSecond === localStorage.getItem("name") && passwordSecond === localStorage.getItem("password")) {
         console.log("Вы успешно вошли")
         alert("Вы успешно вошли")
-        window.location.href = "kor.html"
+        window.location.href = "cart.html"
     }
     else {
         alert("Вы ввели некорректные данные,ошибка")

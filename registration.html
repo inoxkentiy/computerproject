@@ -6,6 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="regisStyle.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Klee+One&display=swap" rel="stylesheet">
     <title>Registration</title>
 </head>
 
@@ -16,58 +19,59 @@
             emailjs.init("user_h8FRMzWOqaf3x4xunQUc6");
         })();
     </script>
-    <p id="first">ПЕРЕД ТЕМ, КАК ОФОРМИТЬ ЗАКАЗ, ВАМ НУЖНО ЗАРЕГИСТРИРОВАТЬСЯ ИЛИ ВОЙТИ!</p>
-    <p id="all">
-    <article class="regis">
-        <div class="container">
+    <h4 style="color: purple; text-align: center;">Чтобы перейти на следующую
+        страницу,пожалуйста,зарегbстрируйтесь,либо войдите в уже существующий
+        аккаунт.</h4>
+    <div id="all">
+        <article class="regis">
+            <div class="container " style="text-align: center;">
+                <h4 style="text-align: center;">Регистрация</h4>
+                <label for="login"><b>Логин</b></label> &nbsp;
+                <input type="text" placeholder="Введите ваш логин" name="email" id="emailInput" required="">
+                <br><br>
+                <label for="psw"><b>Пароль</b></label>
+                <input type="password" placeholder="Введите пароль" name="psw" id="passwordInput" required="">
+                <br><br>
+                <label for="psw"><b>Почта</b></label> &nbsp;
+                <input type="email" placeholder="Введите почту" name="email" id="email" required="">
+                <br><br>
+                <label for="psw"><b>Код</b></label> &nbsp; &nbsp; &nbsp;
+                <input type="text" placeholder="Введите код верификации" name="ver" id="ver" required="">
 
-            <h4>РЕГИСТРАЦИЯ</h4>
-            <label for="login"><b>Логин</b></label> &nbsp;
-            <input type="text" placeholder="Введите ваш логин" name="email" id="emailInput" required="">
-            <br><br>
-            <label for="psw"><b>Пароль</b></label>
-            <input type="password" placeholder="Введите пароль" name="psw" id="passwordInput" required="">
-            <br><br>
-            <label for="psw"><b>Почта</b></label> &nbsp;
-            <input type="email" placeholder="Введите почту" name="email" id="email" required="">
-            <br><br>
-            <label for="psw"><b>Код</b></label> &nbsp; &nbsp; &nbsp;
-            <input type="text" placeholder="Введите код верификации" name="ver" id="ver" required="">
-
-            <p id="rules">Регистрируясь, вы принимаете <span><a href="./Пользовательское.html">
-                        пользовательское соглашение и
-                        политику
-                        конфиденциальности
-                    </a></span>
-            </p> <input type="checkbox" id="one">
-
-            <button id="btn1" class="btnLog">Отправить письмо</button>
-            <button id="btn2" class="btnLog">Зарегистрироваться</button>
-        </div>
-    </article>
-
-    <article class="login">
-        <div class="container" style="margin-top: 50px;">
-            <h3 id="black">Заполнить форму авторизации и залогиниться на сайт.</h3>
-
-            <h4>ВХОД</h4>
-            <label for="login"><b>Логин</b></label> &nbsp;
-            <input type="text" placeholder="Введите ваш логин" name="email" id="emailInput2" required="">
-            <br><br>
-            <label for="psw"><b>Пароль</b></label>
-            <input type="password" placeholder="Введите пароль" name="psw" id="passwordInput2" required="">
-            <br> <br>
-            <button id="btnSecond">Login</button> &nbsp;
-            <button id="delete">Delete</button> &nbsp; <button id="refresh">Refresh Users</button>
-
-            <div id="refreshBlock">
-
+                <p id="rules">Регистрируясь, вы принимаете
+                    пользовательское соглашение и
+                    политику
+                    конфиденциальности
+                    <input type="checkbox" id="one">
+                </p>
+                <hr>
+                <button id="btn1" class="btnLog">Отправить письмо</button>
+                <button id="btn2" class="btnLog">Зарегистрироваться</button>
             </div>
-        </div>
+        </article>
+
+        <article class="login">
+            <div class="container" style="text-align: center;">
+                <h4>ВХОД</h4>
+                <label for="login"><b>Логин</b></label> &nbsp;
+                <input type="text" placeholder="Введите ваш логин" name="email" id="emailInput2" required="">
+                <br><br>
+                <label for="psw"><b>Пароль</b></label>
+                <input type="password" placeholder="Введите пароль" name="psw" id="passwordInput2" required="">
+                <br> <br>
+                <hr>
+                <button id="btnSecond">Войти</button> &nbsp;
+                <button id="delete">Почистить список пользователей</button> &nbsp; <button id="refresh">Обновить базу
+                    пользователей</button>
+
+                <div id="refreshBlock">
+
+                </div>
+            </div>
 
 
-    </article>
-    </p>
+        </article>
+    </div>
     <script src="regscript.js"></script>
 </body>
 

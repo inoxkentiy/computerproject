@@ -1,0 +1,124 @@
+body {
+    padding: 0;
+    margin: 0;
+    background-color: black;
+    color: rgb(255, 255, 255);
+    font-family: 'Montserrat Alternates', sans-serif;
+}
+
+.info_block {
+    border-bottom: 2px solid rgb(0, 0, 0);
+    font-size: 16px;
+    text-align: center;
+    padding: 3px;
+}
+.info_block p{
+    margin: 0;
+    padding-bottom: 5px;
+}
+a{
+    text-decoration: none;
+    font-weight: 800;
+    font-size: 20px;
+    color: purple;
+}
+.asdflkj{
+    font-weight: 800;
+    font-size: 20px;
+    color: purple;
+    letter-spacing: .2rem;
+    padding-left: 10px;
+}
+#list{
+    margin: auto;
+    width: 90%;
+}
+select,
+input,
+button {
+    font-family: 'Montserrat Alternates', sans-serif !important;
+}
+.blockasd{
+    display: flex;
+    justify-content: center;
+}
+.buttonStyle {
+    background-color: #0000008f;
+    text-align: center;
+    display: block;
+    color: white;
+    height: auto;
+    position: relative;
+    border: 0;
+    padding: 5px;
+    margin: auto;
+    border: 1px solid purple;
+}
+#gbb{
+    color: #fff;
+    font-size: 10px;
+    font-weight: normal;
+}
+.bigBtnStyle {
+    padding: 15px;
+}
+
+.buttonStyle:hover {
+    box-shadow: inset 0px -20px 20px #5c0a40;
+    cursor: pointer;
+}
+
+@media (max-width: 800px) {
+    .bigBtnStyle {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 600px) {
+    .bigBtnStyle {
+        font-size: 16px;
+        padding: 10px;
+    }
+}
+.bigbox{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+}
+header a {
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 22px;
+    color: rgb(255, 255, 255);
+}
+header a:hover {
+    font-size: 24px;
+  text-shadow: 4px 4px purple;
+}
+header {
+    width: 100%;
+    height: 30px;
+    top: 0;
+    left: 0;
+    z-index: 20;
+    background: #260019;
+    display: flex;
+    padding: 1em 0;
+    margin-bottom: 1em;
+    align-items: center;
+    justify-content: space-around;
+}
+
+@media(max-width: 767px) {
+    .menu-burger__header {
+        position: relative;
+        /* задаем относительное позиционирование */
+        width: 40px;
+        /* определяем размеры блока */
+        height: 35px;
+        display: block;
+        margin-left: 10px;
+    }
+}
+.h3words{
+    margin-left: 20px;
+}

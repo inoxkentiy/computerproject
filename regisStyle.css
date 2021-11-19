@@ -1,5 +1,6 @@
 body {
-    background-image: url(./baaaack.jpg);
+    background-color: black;
+    font-family: 'Klee One', cursive;
 }
 
 #first {
@@ -15,29 +16,34 @@ body {
     padding: 30px;
 }
 
+#all {
+    display: flex;
+}
+
 .regis {
-    float: left;
-    padding: 36px;
-    margin: 15px;
+    width: 20%;
+    padding: 8px;
+    color: white;
     border: 2px solid black;
     border-radius: 10px;
-    background-color: lightsteelblue;
+    background-color: rgba(117, 5, 102, 0.247);
 }
 
 .login {
-    float: right;
-    margin: 62px;
+    float: left;
+    color: white;
+    width: 79%;
     border: 2px solid black;
     border-radius: 10px;
-    padding: 36px;
-    background-color: lightsteelblue;
+    padding: 20px;
+    background-color: rgba(117, 5, 102, 0.247);
 }
 
-#first {
-    text-align: center;
-    background-color: #9d5093;
-    height: 0px;
-    padding: 2%;
-    border-bottom: 2px solid #38494f;
-    color: white;
-  }
+button {
+    padding: 5px;
+    margin: auto;
+    color: purple;
+    background-color: rgb(0, 0, 0);
+    border: 2px solid purple;
+
+}
