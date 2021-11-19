@@ -10,6 +10,7 @@ listdiv = $("#list")
 cartArray.map(item => listdiv.append(`<div class="info_block">
     <p>Товар: ${item.name}</p>
     <p>Цена: ${item.price} KZT</p>
+    <p>Категория: ${item.type} KZT</p>
     <button class="buttonStyle" onclick="deleteitem('${item.name}')" id="delOneObj${cartArray.indexOf(item)}">Убрать товар</button><br>
     </div>`))
 function deleteitem(name) {
